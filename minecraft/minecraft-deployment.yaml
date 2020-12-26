@@ -25,9 +25,9 @@ spec:
             - configMapRef:
                 name: minecraft-config
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgredb
+            - mountPath: /var/lib/minecraft/data
+              name: minecraft
       volumes:
-        - name: postgredb
+        - name: minecraft
           persistentVolumeClaim:
-            claimName: postgres-pv-claim
+            claimName: minecraft-pv-claim
